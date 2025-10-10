@@ -18,9 +18,9 @@ class LoginPage(BasePage):
     def click_to_registration_button(self):
         self.click_to_element(LoginPageLocators.REGISTER_BUTTON)
 
-    @allure.step('Заполнение полей email и пароля и нажатие кнопки авторизации')
+    @allure.step('Заполнение полей username и пароля и нажатие кнопки авторизации')
     def add_user_data_and_click_login_button(self, user_data):
-        self.add_text_to_element(LoginPageLocators.EMAIL_INPUT, user_data["email"])
+        self.add_text_to_element(LoginPageLocators.USERNAME_INPUT, user_data["username"])
         self.add_text_to_element(LoginPageLocators.PASSWORD_INPUT, user_data["password"])
         self.click_to_element(LoginPageLocators.LOGIN_SUBMIT_BUTTON)
         self.wait_until_url_is_changed(urls.URL_RECIPES_PAGE)
