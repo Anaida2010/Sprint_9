@@ -37,7 +37,7 @@ def register_user(driver):
     registration_page = RegistrationPage(driver)
     registration_page.register_user(user_data)
     return driver, {
-        "email" : user_data["email"],
+        "email" : user_data["username"],
         "password" : user_data["password"]
     }
 
